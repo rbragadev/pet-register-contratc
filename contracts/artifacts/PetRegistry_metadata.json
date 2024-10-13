@@ -49,6 +49,32 @@
 				"type": "function"
 			},
 			{
+				"inputs": [],
+				"name": "getBalance",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "uint256",
@@ -137,6 +163,26 @@
 				],
 				"name": "registerPet",
 				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "registrationFee",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "withdraw",
+				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
 			}
@@ -169,11 +215,11 @@
 	},
 	"sources": {
 		"contracts/PetRegistry.sol": {
-			"keccak256": "0x433303ae3aee565c1ccfb73fd34823096ba7bac9ef5e13e98c770ffc6392d400",
+			"keccak256": "0xf0946908b4b383e27ef268d3c51144c603ee2278e0913a7e9ddea71fa96608ee",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://941b276c44514a09c6bbd761a8318ec1c51ac206b4c2f39ad256ee7ae7dde2df",
-				"dweb:/ipfs/QmfGG61GWsCmNoQrWKPDw66asSmHxdWZ4s67nA1L6Fercj"
+				"bzz-raw://ac7f3f3289aab95ca60bfcfc7ca5289188fad3fdff5c8bb88f717ca9a83becda",
+				"dweb:/ipfs/QmZq2CtsH9NBYNPgytGbJpuhAXXBfPHVZfHBWdazjezWmw"
 			]
 		}
 	},
