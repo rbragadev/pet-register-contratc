@@ -2,8 +2,9 @@
 pragma solidity ^0.8.0;
 
 import "@chainlink/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol";
+import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 
-contract PetRegistry {
+contract PetRegistry is ERC721 {
 
     AggregatorV3Interface internal priceFeed;
 
@@ -25,11 +26,10 @@ contract PetRegistry {
     mapping(uint256 => Pet) public pets;
 
     uint256 public counter;
-    //in prod we use wei
     uint256 public usdRegistrationFee;
     address public owner;
 
-    constructor (){
+    constructor () ERC721("PetNFT", "PET") {
         counter = 0;
         owner = msg.sender;
         usdRegistrationFee = 10;
@@ -82,6 +82,7 @@ contract PetRegistry {
     ) internal {
         uint256 petId = _generatePetId();
         pets[petId] = Pet(petId, _name, _species, _breed, _color, _birthDate, _weight, msg.sender);
+        _mint(msg.sender, petId);
         emit PetRegistered(petId, msg.sender, _name);
     }
 
